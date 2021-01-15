@@ -1,65 +1,71 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import ListItem from '../components/ListItem'
+import HeaderBar from '../components/HeaderBar'
+import NotificationBar from '../components/NotificationBar'
+import SearchBar from '../components/SearchBar'
+import MainContentBlank from '../components/MainContentBlank'
+import HeaderBarChat from '../components/HeaderBarChat'
+import MessageList from '../components/MessageList'
+import MessageBar from '../components/MessageBar'
 
 export default function Home() {
-  return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    return (
+        <div>
+            <Head>
+                <title>(1) WhatsApp</title>
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+            <div className="flex flex-row h-screen">
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+                {/* SideBar Content */}
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+                <div className="flex flex-col w-2/6">
+                    <div className="flex-none bg-gray-200 z-10">
+                        <HeaderBar />
+                        <NotificationBar />
+                        <SearchBar />
+                    </div>
+                    <div className="flex-auto overflow-y-auto z-10 scrollbar-w-2 scrollbar-track-white scrollbar-thumb-gray-lighter">
+                        <div className="flex flex-col divide-y ">
+                            <ListItem src="avatar1.jpg" />
+                            <ListItem src="avatar2.jpg" />
+                            <ListItem src="avatar3.jpg" />
+                            <ListItem src="avatar4.jpg" />
+                            <ListItem src="avatar5.jpg" />
+                            <ListItem src="avatar6.jpg" />
+                            <ListItem src="avatar1.jpg" />
+                            <ListItem src="avatar2.jpg" />
+                            <ListItem src="avatar3.jpg" />
+                            <ListItem src="avatar4.jpg" />
+                            <ListItem src="avatar5.jpg" />
+                            <ListItem src="avatar6.jpg" />
+                        </div>
+                    </div>
+                </div>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+                {/* Main Content */}
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
+                {/* <MainContentBlank /> */}
+                <div className="hero flex flex-col flex-grow bg-chat z-0">
+                    <style jsx>{`
+                        .hero::before {
+                            content: "";
+                            position: absolute;
+                            top: 0px;
+                            right: 0px;
+                            bottom: 0px;
+                            left: 0px;
+                            background-image: url('/chat-background.png');
+                            opacity: 0.06;
+                            z-index: -1;
+                        }
+                    `}</style>
+                    <HeaderBarChat />
+                    <MessageList />
+                    <MessageBar />
+                </div>
+            </div>
+        </div >
+    )
 }
