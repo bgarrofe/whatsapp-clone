@@ -10,10 +10,10 @@ export default function HeaderBarChat() {
                     </button>
                     <div className="flex flex-col flex-grow ml-4">
                         <div className="flex flex-row justify-between items-center">
-                            <h4 className="font-normal text-gray-700">Grupo Lukinho</h4>
+                            <h4 className="font-normal text-gray-700">Group Lukinho</h4>
                         </div>
                         <div className="flex flex-row justify-between items-center">
-                            <h4 className="text-2xs text-gray-500">Babynha, Mãe, Você</h4>
+                            <h4 className="text-2xs text-gray-500">Jane, June, Me</h4>
                         </div>
                     </div>
                 </div>

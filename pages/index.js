@@ -28,18 +28,13 @@ export default function Home() {
                     </div>
                     <div className="flex-auto overflow-y-auto z-10 scrollbar-w-2 scrollbar-track-white scrollbar-thumb-gray-lighter">
                         <div className="flex flex-col divide-y ">
-                            <ListItem src="avatar1.jpg" />
-                            <ListItem src="avatar2.jpg" />
-                            <ListItem src="avatar3.jpg" />
-                            <ListItem src="avatar4.jpg" />
-                            <ListItem src="avatar5.jpg" />
-                            <ListItem src="avatar6.jpg" />
-                            <ListItem src="avatar1.jpg" />
-                            <ListItem src="avatar2.jpg" />
-                            <ListItem src="avatar3.jpg" />
-                            <ListItem src="avatar4.jpg" />
-                            <ListItem src="avatar5.jpg" />
-                            <ListItem src="avatar6.jpg" />
+                            <ListItem title="Group Lukinho" message="Jane: You think I'm being paranoid but the truth..." src="avatar1.jpg" />
+                            <ListItem title="Jane" message="Jane: HI there!" src="avatar2.jpg" />
+                            <ListItem received={true} title="Lucas" message="That's ok!" src="avatar3.jpg" />
+                            <ListItem title="Robert" message="Robert: Are you there?" src="avatar4.jpg" />
+                            <ListItem received={true} title="Linda" message="Deal!" src="avatar5.jpg" />
+                            <ListItem title="Rose" message="Rose: You can count on me" src="avatar6.jpg" />
+
                         </div>
                     </div>
                 </div>
